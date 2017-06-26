@@ -6,13 +6,15 @@ import { InfotaimentComponent } from './infotaiment/infotaiment.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { BrocodeComponent } from './brocode/brocode.component';
+import { FirsthtmlComponent } from './firsthtml/firsthtml.component';
 
 const appRoutes: Routes = [
+   { path: 'firsthtml', component: FirsthtmlComponent},
   { path: 'infotainment', component: InfotaimentComponent },
   { path: 'home', component: AppComponent},
    { path: 'brocode', component: BrocodeComponent},
   { path: '',
-    redirectTo: 'infotainment',
+    redirectTo: 'firsthtml',
     pathMatch: 'full'
   },
 ];
@@ -21,7 +23,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     InfotaimentComponent,
-    BrocodeComponent
+    BrocodeComponent,
+    FirsthtmlComponent
   ],
   imports: [
     BrowserModule,
